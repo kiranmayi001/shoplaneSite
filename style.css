@@ -1,0 +1,589 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#top-bar{
+width: 100%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+}
+
+#left-menu{
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+#logo{
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-right: 16px;
+}
+
+#logo > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#logo span{
+    font-weight: 800;
+}
+#left-menu > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#search-wrapper{
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+#search-wrapper > i {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+#search-box {
+    width: 100%;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+}
+#right-menu {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+#cart-div {
+    position: relative;
+    margin-right: 32px;
+}
+#cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+#cart-wrapper > a {
+    text-decoration: none;
+    color: black;
+}
+#right-menu > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#cart-icon{
+    color: black;
+}
+/* ----------------------------------------------------------------------DROPDOWN */
+#drop-down-icon{
+    display:none;
+}
+#overlay{
+  
+    position: fixed;
+    z-index:100;
+    /* left: 30%; */
+    background-color: black;
+    height: 270px;
+    width: 100%;
+    
+    /* margin-top: 50px; */
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;
+    transform: translateY(-100%);
+    transition: all .2s ease-out;
+    display: none;
+}
+#overlay h2{
+    position: absolute;
+    color: white;
+
+    
+}
+#drop-cloth-ref{
+    text-decoration: none;
+    color:white;
+    position: absolute;
+    top:70px;
+    /* margin-left: 32px; */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#drop-accessory-ref{
+    text-decoration: none;
+    color:white;
+    /* margin-left: 32px; */
+    position: absolute;
+    top:110px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#selected-ref{
+    text-decoration: none;
+    color:white;
+    /* margin-left: 32px; */
+    position: absolute;
+    top:150px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#angle-up{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color:white;
+}
+#responsive-search{
+    display: none;
+}
+/* --------------------------------------------------------------------------------------BANNNER */
+#main{
+    width: 100%;
+    min-height: 80vh;
+    /* background-color: yellow; */
+    box-sizing: border-box;
+    margin-top: 130px; 
+    /* make above 100 if required */
+    padding-bottom: 8%;
+}
+.slider-main-div{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    /* background-color: yellow; */
+}
+.slider-main-div{
+ padding: 0px 40px;
+}
+.slide-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 0 60px;
+    margin-left: 0px;
+
+}
+
+/* ----------------------------------------------------------------CLOTHING SECTION */
+#clothes-section{
+    padding: 4% 8% 0;
+}
+.section-heading{
+    font-size: 30px;
+    font-weight: 600;
+    opacity:0.9;
+}
+#clothing-grid{
+    display:flex;
+    /* justify-content: start; */
+    /* flex-wrap: wrap; */
+}
+.clothing-product-card{
+    width:100%;
+max-width:19%;
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-bottom: 16px;
+box-sizing: border-box;
+box-shadow: 0 2px 5px #ccc;
+border-radius: 5px;
+}
+.clothing-product-card a{
+    text-decoration: none;
+    color: black;
+ 
+}
+.cloth-product-image{
+    width: 100%;
+}
+.clothing-product-card h4{
+    padding-left: 10px;
+width:80%;
+}
+.clothing-product-card h5{
+    padding-left: 10px;
+    opacity:0.6;
+}
+.clothing-product-card p{
+    padding-left: 10px;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #009688;
+}
+/* ----------------------------------------------------------------ACCESSORY SECTION */
+#accessory-section{
+    padding: 4% 8% 0;
+}
+.section-heading{
+    font-size: 30px;
+    font-weight: 600;
+    opacity:0.9;
+}
+#accessory-grid{
+    display:flex;
+    /* justify-content: start; */
+    /* flex-wrap: wrap; */
+}
+.accessory-product-card{
+    width:100%;
+max-width:19%;
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-bottom: 16px;
+box-sizing: border-box;
+box-shadow: 0 2px 5px #ccc;
+border-radius: 5px;
+}
+.accessory-product-card a{
+    text-decoration: none;
+    color: black;
+ 
+}
+.cloth-product-image{
+    width: 100%;
+}
+.accessory-product-card h4{
+    padding-left: 10px;
+width:80%;
+}
+.accessory-product-card h5{
+    padding-left: 10px;
+    opacity:0.6;
+}
+.accessory-product-card p{
+    padding-left: 10px;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #009688;
+}
+/* ----------------------------------------------------------------------------------THE  EDYODA LOGO */
+
+#edyoda-projects-logo {
+    position: fixed;
+    width: 130px;  
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    /* background-color: white; */
+   
+}
+
+
+/* ---------------------------------------------------------------------------------------Footer */
+footer{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    opacity:0.9;
+}
+footer div{
+    padding-top: 50px;
+    padding-left: 130px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-heading{
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+}
+footer div a{
+    margin-top:5px;
+    text-decoration: none;
+}
+.footer-store-link{
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+.slick-slide{
+    width:100%;
+    margin:0 50px;
+}
+
+.slick-dots{
+    list-style-type:none;
+    width:100%;
+    max-width:200px;
+    text-align:center;
+    margin:0 auto;
+}
+ 
+.slick-dots li{
+    display: inline-block;
+}
+.slick-dots button {
+    display: inline-block;
+    font-size: 0px;
+    color: #ccc;
+    background-color: #ccc;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0;
+    margin-left: 6px;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
+}
+ 
+.slick-active button{
+    background-color:#aaa;
+}
+
+@media(max-width:467px){
+   
+    html{
+        overflow-x: hidden; 
+        box-sizing: border-box;
+      }
+    body{
+       
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    
+        overflow-x:hidden;  
+        box-sizing: border-box;
+    }
+    header{
+        width:50%;
+        box-sizing: border-box;
+    }
+    #top-bar{
+        width:100%;
+        box-sizing: border-box;
+    }
+    #left-menu{
+        width:100%;
+        box-sizing: border-box;
+    }
+    #search-wrapper{
+        display: none;
+    }
+    #profile-pic{
+        display: none;
+    }
+
+    #drop-down-icon{
+        display:block;
+        font-size: 20px;
+        /* background-color: yellow; */
+        position: absolute;
+        left:50%;
+        top:0;
+        margin: 0;
+    }
+    #overlay{
+        display: flex;
+    }
+    
+    #accessory-ref{
+        display: none;
+    }
+    #clothing-ref{
+        display: none;
+    }
+    #responsive-search{
+        display: block;
+    }
+    /* ------------------------------------------------ BANNNER */
+    .slick-track {
+
+        width:100%;
+       
+ height:100px;
+    }
+.slick-track img{
+   width:100%;
+  width: 1000px;
+   margin:0;
+}
+.slick-slide{
+    width:100% ;
+  
+}
+.slider-main-div{
+    width:100% !important;
+    padding: 0px 0px;
+   }
+/* ---------------------------------------------------------slide dots */
+
+/* ------------------------------------------------Clothing section */
+#clothes-section{
+    padding: 4% 8% 0;
+}
+.section-heading{
+    font-size: 16px;
+    font-weight: 400;
+    opacity:0.9;
+}
+#clothing-grid{
+    display:flex;
+    /* justify-content: start; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* width: 100%; */
+    width: 300px;
+}
+.clothing-product-card{
+    width:100%;
+ max-width:85%; 
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-bottom: 16px;
+/* box-sizing: border-box; */
+box-shadow: 0 2px 5px #ccc;
+border-radius: 5px;
+}
+.clothing-product-card a{
+    text-decoration: none;
+    color: black;
+    width: 300px;
+ 
+}
+.cloth-product-image{
+    width: 100%;
+}
+.product-meta-data{
+    width:300px;
+}
+.product-meta-data h4{
+    font-size: 10px;
+}
+
+.product-meta-data h5{
+    font-size: 10px;
+}
+.clothing-product-card h4{
+    padding-left: 10px;
+    width: 300px;
+}
+.clothing-product-card h5{
+    padding-left: 10px;
+    opacity:0.6;
+}
+
+/* ------------------------------------------------------------------------------ACCESORY SECTION */
+#accessory-section{
+    padding: 4% 8% 0;
+}
+.section-heading{
+    font-size: 16px;
+    font-weight: 400;
+    opacity:0.9;
+}
+#accessory-grid{
+    display:flex;
+    /* justify-content: start; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* width: 100%; */
+    width: 300px;
+}
+.accessory-product-card{
+    width:100%;
+ max-width:85%; 
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-bottom: 16px;
+/* box-sizing: border-box; */
+box-shadow: 0 2px 5px #ccc;
+border-radius: 5px;
+}
+.accessory-product-card a{
+    text-decoration: none;
+    color: black;
+    width: 300px;
+ 
+}
+
+.accessory-product-card h4{
+    padding-left: 10px;
+width:80%;
+}
+.accessory-product-card h5{
+    padding-left: 10px;
+    opacity:0.6;
+    width: 300px;
+}
+.accessory-product-card p{
+    padding-left: 10px;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #009688;
+}
+
+#edyoda-projects-logo {
+    position: fixed;
+    width: 70px;  
+    bottom: 50px;
+    right: 30px;
+   
+    /* background-color: white; */
+   
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    opacity:0.9;
+    flex-direction: column;
+}
+footer div{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+}

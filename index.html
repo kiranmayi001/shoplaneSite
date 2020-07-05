@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/571943e4a4.js" crossorigin="anonymous"></script>
+    <title>Shopping App</title>
+</head>
+<body>
+<header>
+    <nav id="top-bar">
+        <div id="left-menu">
+            <div id="logo">
+                <a href="/index.html">
+                <span>SHOP</span>
+                LANE
+                </a>
+            </div>
+            <a href="#clothes-section" id="clothing-ref">Clothing</a>
+            <a href="#accessory-section" id="accessory-ref">Accessories</a>
+        </div>
+        <div id="search-wrapper">
+           
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input id="search-box" type="text" name="search" placeholder="Search for Clothing and Accessories">
+        </div>
+        <i class="fas fa-angle-down" id="drop-down-icon"></i>
+
+        <div id="right-menu">
+            <div id="cart-div">
+                <p id="cart-count">0</p>
+                <a href="/checkout.html">
+                <i id="cart-icon"  class="fas fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </div>
+            <img id="profile-pic" src="https://www.oneepicplace.com/wp-content/uploads/2019/04/JOEY-SUP.png" alt="account-picture">
+            <!-- "https://test-hosting-8f9bf.web.app/assets/avatar.jpg" -->
+            <i id="responsive-search" class="fas fa-search"></i>           
+        </div>
+    </nav>
+
+
+</header>
+<div id="overlay" >
+    <h2>Hello, Joey   <i class="far fa-laugh-beam" style="color: yellow;"></i></h2>
+    <a href="#clothes-section" id="drop-cloth-ref">Clothing</a>
+    <a href="#accessory-section" id="drop-accessory-ref">Accessories</a>
+    <a href="./checkout.html" id="selected-ref">Your selected Order</a>
+    <i id="angle-up" class="fas fa-angle-up"></i>
+</div>
+
+
+
+
+
+<div id="main">
+    
+                                    <!-- BANNER SECTION  -->
+    <section id="slide-section">
+        <div class="slider-main-div">
+            
+<div class="slide-list">
+    <img class="i" src="https://imgur.com/96OnkX7.png" width=" 500px"/>
+    <img class="i" src="https://imgur.com/KtGxwnN.png" />
+    <img class="i" src="https://imgur.com/sfjg9R8.png" />
+    <img  class="i" src="https://imgur.com/p0wdadG.png" />
+</div>
+    </section>
+
+
+                                  <!-- BANNER SECTION COMPLETE -->
+                                  <!-- CLOTHING SECTION -->
+
+
+ <section id="clothes-section">
+    <h3 class="section-heading">Clothing for Men and Women</h3>
+    <div id="clothing-grid">
+        <div class="clothing-product-card">
+            <!-- require endpoint with card number 1 -->
+            <a href="/product">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="" class="cloth-product-image" width:98px>
+            </a>
+            <div class="product-meta-data">
+                <h4>Men Navy Blue Solid Sweatshirt</h4>
+                <h5>United Colors of Benetton</h5>
+                <p>Rs 2599</p>
+            </div>  
+        </div>
+        <div class="clothing-product-card">
+             <!-- require endpoint with card number 2 -->
+             <a href="/product">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg" class="cloth-product-image" width:98px>
+            </a>
+            <div class="product-meta-data">
+                <h4>Men Black MAMGP T7 Sweat Sporty Jacket</h4>
+                <h5>Puma</h5>
+                <p>Rs 7999</p>
+            </div>
+        </div>
+        <div class="clothing-product-card">
+             <!-- require endpoint with card number 3 -->
+             <a href="/product">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2018/9/19/b1373b00-37d4-41a0-a908-5d742a68d3661537343756229-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>Men Black Action Parkview Lifestyle Shoes</h4>
+                <h5>Hush Puppies</h5>
+                <p>Rs 6999</p>
+            </div>
+        </div>
+        <div class="clothing-product-card">
+             <!-- require endpoint with card number 4 -->
+             <a href="/product">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/3854721/2018/3/12/11520844673915-BARESKIN-Women-Black-Solid-Lightweight-Leather-Jacket-7761520844673718-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>Women Black Solid Lightweight Leather Jacket</h4>
+                <h5>BARESKIN</h5>
+                <p>Rs 9999</p>
+            </div>
+        </div>
+        <div class="clothing-product-card">
+             <!-- require endpoint with card number 5 -->
+             <a href="/product">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/5649908/2018/5/10/6bfe80cd-2f55-42bc-aa7f-e0d6c9e2ac531525936414747-SASSAFRAS-Women-Blue-Solid-Shirt-Dress-3831525936414532-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>Women Blue Solid Shirt Dress</h4>
+                <h5>SASSAFRAS</h5>
+                <p>Rs 5200</p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+ <section id="accessory-section">
+    <h3 class="section-heading">Accessories for Men and Women</h3>
+    <div id="accessory-grid">
+        <div class="accessory-product-card">
+            <!-- require endpoint with card number 1 -->
+            <a href="/accessory">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9803247/2019/5/27/624dac60-4c42-4902-bba1-30a51cc7f43c1558948536543-Apple-Unisex-Smart-Watches-1441558948536225-1.jpg" alt="" class="cloth-product-image" width:98px>
+            </a>
+            <div class="product-meta-data">
+                <h4>Unisex Silver-Toned Series 3 Smart Watch</h4>
+                <h5>Apple</h5>
+                <p>Rs 31999</p>
+            </div>  
+        </div>
+        <div class="accessory-product-card">
+             <!-- require endpoint with card number 2 -->
+             <a href="/accessory">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2019/2/23/dc05b5e5-aa82-493e-bf0b-0c309baf21021550920383101-1.jpg" class="cloth-product-image" width:98px>
+            </a>
+            <div class="product-meta-data">
+                <h4>Unisex Black & Green Reflex 2.0 Smart Band</h4>
+                <h5>Fastrack</h5>
+                <p>Rs 1999</p>
+            </div>
+        </div>
+        <div class="accessory-product-card">
+             <!-- require endpoint with card number 3 -->
+             <a href="/accessory">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/10122083/2019/6/24/e533a691-3908-41b0-8307-1928a37d4ec41561362162650-Samsung-Galaxy-Fit-4801561362161527-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>Unisex Black Galaxy Fit Fitness Band</h4>
+                <h5>Samsung</h5>
+                <p>Rs 9990</p>
+            </div>
+        </div>
+        <div class="accessory-product-card">
+             <!-- require endpoint with card number 4 -->
+             <a href="/accessory">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/8593217/2019/4/9/de2c21f3-6731-4c29-9369-692a486a1b8c1554802772926-Samsung-Gear-IconX-Black-Cord-free-Fitness-Earbuds-256155480-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>Gear IconX Black Cord-free Fitness Earbuds</h4>
+                <h5>Samsung</h5>
+                <p>Rs 13990</p>
+            </div>
+        </div>
+        <div class="accessory-product-card">
+             <!-- require endpoint with card number 5 -->
+             <a href="/accessory">
+                <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9803279/2019/5/27/6661d579-12ae-456b-b8f2-e78e5256a99c1558948436173-Apple-AirPods-with-Charging-Case-2nd-Gen-White-3831558948435-1.jpg" alt="" class="cloth-product-image">
+            </a>
+            <div class="product-meta-data">
+                <h4>White 2nd Gen AirPods with Charging Case</h4>
+                <h5>Apple</h5>
+                <p>Rs 14999</p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+</div>
+<!-- -------------------------------------------------main div done -->
+
+
+<img id="edyoda-projects-logo" src="https://i.imgur.com/OKAY6Fl.png" alt="EdYoda Projects Logo">
+
+
+<!-- ------------------------------------------------------------------------FOOTER SECTION -->
+<footer>
+    <div>
+        <p class="footer-heading">ONLINE STORE</p>
+        <a href="/" class="footer-store-link">MEN CLOTHING</a>
+        <a href="/" class="footer-store-link">WOMEN CLOTHING</a>
+        <a href="/" class="footer-store-link">MEN ACCESSORIES</a>
+        <a href="/" class="footer-store-link">WOMEN ACCESSORIES </a>
+    </div>
+    <div>
+        <p class="footer-heading">HELPFUL LINKS</p>
+        <a href="/" class="footer-store-link">HOME</a>
+        <a href="/" class="footer-store-link">ABOUT</a>
+        <a href="/" class="footer-store-link">CONTACT</a>
+    </div>
+    <div>
+        <p class="footer-heading">PARTNERS</p>
+        <a href="/" class="footer-store-link">ZARA</a>
+        <a href="/" class="footer-store-link">PANTALOONS</a>
+        <a href="/" class="footer-store-link">LEVIS</a>
+        <a href="/" class="footer-store-link">UCB</a>
+        <a href="/" class="footer-store-link">+MANY MORE</a>
+
+    </div>
+    <div>
+        <p class="footer-heading">ADDRESS</p>
+        <a href="/" class="footer-store-link">BUILDING 101</a>
+        <a href="/" class="footer-store-link">CENTRAL AVENUE</a>
+        <a href="/" class="footer-store-link">LA-902772</a>
+        <a href="/" class="footer-store-link">UNITED STATES</a>
+    </div>
+</footer>
+
+
+
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./slide.js"></script>
+</body>
+</html>

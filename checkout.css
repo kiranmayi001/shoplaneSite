@@ -1,0 +1,463 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#top-bar{
+width: 100%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+}
+
+#left-menu{
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+#logo{
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-right: 16px;
+}
+
+#logo > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#logo span{
+    font-weight: 800;
+}
+#left-menu > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#search-wrapper{
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+#search-wrapper > i {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+#search-box {
+    width: 100%;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+}
+#right-menu {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+#cart-div {
+    position: relative;
+    margin-right: 32px;
+}
+#cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+#cart-wrapper > a {
+    text-decoration: none;
+    color: black;
+}
+#right-menu > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* ----------------------------------------------------------------------DROPDOWN */
+#drop-down-icon{
+    display:none;
+}
+#overlay{
+  
+    position: fixed;
+    z-index:100;
+    /* left: 30%; */
+    background-color: black;
+    height: 270px;
+    width: 100%;
+    
+    /* margin-top: 50px; */
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;
+    transform: translateY(-100%);
+    transition: all .2s ease-out;
+    display: none;
+}
+#overlay h2{
+    position: absolute;
+    color: white;
+
+    
+}
+#drop-cloth-ref{
+    text-decoration: none;
+    color:white;
+    position: absolute;
+    top:70px;
+    /* margin-left: 32px; */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#drop-accessory-ref{
+    text-decoration: none;
+    color:white;
+    /* margin-left: 32px; */
+    position: absolute;
+    top:110px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#selected-ref{
+    text-decoration: none;
+    color:white;
+    /* margin-left: 32px; */
+    position: absolute;
+    top:150px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#angle-up{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    color:white;
+}
+#responsive-search{
+    display: none;
+}
+/* --------------------------------------------------------------------------------------Main */
+#main{
+    width: 100%;
+    min-height: 80vh;
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding-bottom: 8%;
+    /* background-color: yellow; */
+}
+#main-div{
+    padding: 4% 8%;
+    box-sizing: border-box;
+}
+#content-wrapper{
+    display: flex;
+    justify-content: start;
+}
+#card-list-left{
+    width:50%;
+    /* background-color: yellow; */
+  
+  
+
+}
+.section-heading{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 16px;
+}
+#checkout-card-col{
+    display:flex;
+    flex-direction: column;
+   
+}
+.checkout-card{
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 500px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 5px #ccc;
+    /* flex-direction: column;  */
+   
+}
+
+.checkout-card h4{
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.checkout-card p{
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.checkout-product-image{
+    width:80px; height:107px;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------------------------------------PLACE ORDER CARD */
+#checkout-card-right{
+    margin-top: 50px;
+    width:50%;
+    height:300px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 500px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 5px #ccc;
+}
+#total-amount{
+    font-weight: 900;
+    font-size: 24px;
+}
+#place-order-button{
+    margin-top: 50px;
+    width:180px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    padding-top: 18px 36px;
+    background-color: #009688;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: transform 200ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#edyoda-projects-logo {
+    position: fixed;
+    width: 130px;  
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    /* background-color: white; */
+}
+
+/* ----------------------------------------------------------------------------------FOOTER */
+footer{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    opacity:0.9;
+}
+footer div{
+    padding-top: 50px;
+    padding-left: 130px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-heading{
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+}
+footer div a{
+    margin-top:5px;
+    text-decoration: none;
+}
+.footer-store-link{
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:467px){
+   
+    html{
+        overflow-x: hidden; 
+        box-sizing: border-box;
+      }
+    body{
+       
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    
+        overflow-x:hidden;  
+        box-sizing: border-box;
+    }
+    header{
+        width:50%;
+        box-sizing: border-box;
+    }
+    #top-bar{
+        width:100%;
+        box-sizing: border-box;
+    }
+    #left-menu{
+        width:100%;
+        box-sizing: border-box;
+    }
+    #search-wrapper{
+        display: none;
+    }
+    #profile-pic{
+        display: none;
+    }
+    #more-option{
+        display: block;
+    }
+    #accessory-ref{
+        display: none;
+    }
+    #clothing-ref{
+        display: none;
+    }
+    #drop-down-icon{
+        display:block;
+        font-size: 20px;
+        /* background-color: yellow; */
+        position: absolute;
+        left:50%;
+        top:0;
+        margin: 0;
+    }
+    #overlay{
+        display: flex;
+    }
+    
+    #accessory-ref{
+        display: none;
+    }
+    #clothing-ref{
+        display: none;
+    }
+    #responsive-search{
+        display: block;
+    }
+
+/* ------------------------------------------------checkout section */
+
+#content-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+#card-list-left{
+    width:100%;
+}
+#checkout-card-right{
+    width:100%;
+}
+#place-order-button{
+    width:100%;
+}
+
+#edyoda-projects-logo {
+    position: fixed;
+    width: 70px;  
+    bottom: 50px;
+    right: 30px;
+   
+    /* background-color: white; */
+   
+}
+/* ---------------------------------------------------------footer */
+
+footer{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    opacity:0.9;
+    flex-direction: column;
+}
+footer div{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+}
+
